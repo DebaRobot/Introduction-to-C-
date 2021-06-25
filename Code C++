@@ -1,0 +1,321 @@
+User Input :
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    cout << "hey what do you want to eat ? ";
+    string ans1;
+    getline(cin, ans1);
+    
+    cout << "How many slices do you want ? ";
+    int ans2;
+    cin >> ans2;
+    
+    cout << "You want to eat "<<ans2<<" slices of "<<ans1<<endl;
+    
+}
+--------------------------------------------------------------------
+Creating a basic food ordering app
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    cout << "What do you want to eat "<<endl;
+    string q1;
+    getline(cin,q1);
+    
+    cout<<"What you will want to drink "<<endl;
+    string q2;
+    getline(cin,q2);
+    
+    cout << "What is the price of the food "<<endl;
+    double q3;
+    cin >> q3;
+    
+    cout << "What is the price of the drinks "<<endl;
+    double q4;
+    cin >> q4;
+    
+    cout<<"What is the tip that you want to leave "<<endl;
+    double q5;
+    cin >> q5;
+    
+    double q6 = q3 + q4 + q5 * (q3 + q4);
+    cout<<"Your order is "<<q1<<" and "<<q2<<" as a drink "<<" the total price of your order with the tips is "<<q6<<" dollars ! "<<endl;
+    
+}
+--------------------------------------------------------------------------------------
+DataType Part 1
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    // more than one variable in an array
+    string  food[] = {"Pasta","Pizza","Burgur","Susee","Lasagna"};
+    
+    string movie[10] = {};
+    movie[0] = "Mvg";
+    movie[4] = "Kmg";
+    movie[1] = "Rft";
+    
+    cout<<food[0]<<endl;
+    cout<<food[4]<<endl;
+    
+    cout<<movie[0]<<endl;
+    
+    return 0 ;
+
+}
+------------------------------------------------------------------------------------------
+DataType Part 2
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    
+    //User Inputted Data
+    string food[10] = {};
+    cout << "Please fill up the number 2 of the array"<<endl;
+    getline(cin,food[2]);
+    cout << "Please fill up the number 3 of the array"<<endl;
+    getline(cin,food[3]);
+    
+    cout<<"The food in the list : "<<endl;
+    cout<<food[2]<<endl;
+    cout<<food[3]<<endl;
+    
+    return 0 ;
+
+}
+-------------------------------------------------------------------------------------------------
+Working with Multiple Functions Part 1
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int cart( ){ // Normal run will not works
+    string  car[3]  = {};
+    car[0] = "B M W";
+    car[1] = "Audi";
+    car[2] = "Honda";
+    //Call inside main function
+    
+    int qt_car[3] = {};
+    qt_car[0] = 3;
+    qt_car[1] = 4;
+    qt_car[2] = 13;
+    
+    cout<<qt_car[0] + qt_car[1] + qt_car[2]<<endl;
+}
+
+int main(){ //principle function
+
+    cout<<"The quantity of cars in stock is : "; 
+    cart();
+    
+    return 0 ;
+}
+---------------------------------------------------------------------------------------------------------
+Working with Multiple Functions Part 2
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int add(int a, int b, int c){
+    cout << a + b + c << endl;
+    cout << a - b - c << endl;
+    cout << a * b * c << endl;
+    cout << a / b / c << endl;
+}
+
+int main(){ //principle function
+
+    int var1 = 5 ;
+    //cin >> var1
+    int var2 = 6 ;
+    //cin >> var2
+    int var3 = 7 ;
+    //cin >> var3
+    
+    cout << "The Basic Operations : "<<endl;
+    add(var1, var2, var3);
+    
+    //add(5, 5, 7);
+    return 0 ;
+}
+--------------------------------------------------------------------------------------------------------
+Understanding the IF Statement Part 1
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main(){ 
+    //string val1 = "yes";
+    string val1  = "no";
+    int val2 = 5;
+    int val3 = 6;
+    
+    if(val1 == "yes" && val2 > 4 && val2 == 6){ // OR operator can be used
+        cout << "great" << endl;
+    }else{
+        cout<<"bad"<<endl;
+    }
+    return 0 ;
+}
+----------------------------------------------------------------------------------------------------------------
+Understanding the IF Statement Part 2
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main(){ 
+    
+    cout<<"do you love Pizza"<<endl;
+    string val1;
+    getline(cin, val1);
+    
+    cout<<"do you love burgurs"<<endl;
+    string val2;
+    getline(cin, val2);
+    
+    if(val1 == "yes" && val2 == "yes"){
+        cout<<"You love pizza and burgur"<<endl;
+    }else if(val1 == "yes" && val2 != "yes"){
+        cout<<"You only love pizza"<<endl;
+    }else if(val1 != "yes" && val2 == "yes"){
+        cout<<"You only love burgur"<<endl;
+    }else{
+        cout<<"You love none of these"<<endl;
+    }
+    
+    return 0 ;
+}
+------------------------------------------------------------------------------------------
+Creating a Coffee Selectors
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    double cP = 2.00;
+    cout<<"do you like to have a coffee"<<endl;
+    string q1;
+    getline(cin, q1);
+    
+    cout<<"Enter your balance "<<endl;
+    double balance;
+    cin>>balance;
+    
+    if(q1 == "yes" && balance >= cP){
+        cout<<" Here is your coffee "<<endl;
+        cout<<" New balance of User : "<<balance - cP<<endl;
+    }
+    else if (q1 == "yes" && balance < cP){
+        cout<<" You dont have enough money sorry "<<endl;
+    }
+    else{
+        cout<<"Have a good Day"<<endl;
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------------------
+Understanding For loop Part 1
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<cmath>
+
+using namespace std;
+
+int main() {
+
+    int val1 = 75 ;
+
+    // counter loop
+    //for(int i = 0; i < 50; i += 3 )
+    for(int i = 0; i < val1; i += 3 ){
+        cout <<"The number "<<i<<" is still smaller than "<< val1 << endl;
+    }
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------
+Understanding While loop Part 2 ( Creating a password )
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<cmath>
+
+using namespace std;
+
+int main() {
+
+    cout<<" create a password " <<endl;
+    string pass;
+    getline(cin, pass);
+
+    cout<<"What is the Password"<<endl;
+    string i;
+    getline(cin, i);
+
+    while(i != pass){
+        cout << " Wrong Password!! , Please try again"<< endl;
+        getline(cin,i);
+    }
+
+    cout<<" You are in !!" << endl;
+
+    return 0;
+ }
+---------------------------------------------------------------------------------------------
+Generating Different Colour Using Switch Statement
+
+#include <iostream>
+#include<cmath>
+
+using namespace std;
+
+string color(int col){
+string colorful;
+
+switch(col){
+    case 1:
+        colorful = "red";
+        break;
+    
+case 2:
+      colorful = "yellow";
+      break;
+    
+case 3:
+      colorful = "green";
+      break;
+
+default:
+      colorful = "Wrong Number";
+  }
+
+return colorful;
+}
+
+int main() {
+
+    cout<<color(1)<<endl;
+    cout<<color(3)<<endl;
+    cout<<color(5)<<endl;
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------
+Introduce a Comment :
+
+
+// @ Good Bye, Have a Nice Day !!
