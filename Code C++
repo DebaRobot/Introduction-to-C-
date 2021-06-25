@@ -1,3 +1,128 @@
+Program 1.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Welcome" << endl;
+    cout << "Hello Hi world! 123" << endl;
+    cout << "My name is Programmiz" << endl;
+    return 0;
+}
+-------------------------------------------------------------
+Program 2.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //cout << "I ate "<<food1<< endl;
+    
+    string food1 = "Pizza";
+    string food2 = "Pasta";
+    string food3 = "Burger";
+    
+    cout << "I ate "<<food1<< endl;
+    cout << "I really love " <<food1<<endl;
+    cout << food1 << " is great" << endl;
+    cout<< " " <<endl;
+    
+    cout << "I ate "<<food2<< endl;
+    cout << "I really love " <<food2<<endl;
+    cout << food2 << " is great" << endl;
+    cout<< " " <<endl;
+    
+    cout << "My favourite food is  " << food1 <<" , " << food2 << " and "<<food3 << endl;
+    
+    return 0;
+}
+----------------------------------------------------------------------
+Program 3 :
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string try1 = "A simple sentence Hello World 123";
+    
+    // length of the character
+    double size1 = try1.max_size();
+    double size = try1.size();
+    
+    //Indexing
+    int findi = try1.find("simple", 0);
+    int findj = try1.find("He", 0);
+    
+    //Updating a text
+    try1[0] = 'a' ;
+    
+    // delete the sentence
+    try1.clear();
+    
+    
+    cout << try1 <<endl;
+    cout << size1 << endl; 
+    cout << size << endl;// len of the character
+    cout << findi << endl;// Indexing
+    cout << findj << endl;// Indexing
+    return 0;
+}
+-------------------------------------------------------------------------
+Program 4 :
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double s =25;
+    double a = 34;
+    double b = 56.7;
+    double c = 95.45;
+    double d = 87.23;
+    
+    int y = a / b;  // only gives an simple integer
+    double x = a / b; // Gives a decimal points
+    double z = c + x /a + (b + c) * 9; //complex operations
+    // square root, round off to highest or lowest level, maximum / minimum
+    
+    double root = pow(x,3); // 34 x 34 x 34
+    double rt = sqrt(s);
+    
+    double op = min(a,b);
+    double po = max(a,b);
+    
+    double rn = floor(z);
+    double nr = ceil(z);
+    double r = round(z);
+    
+    cout << y << endl;
+    cout << x << endl;
+    cout << z << endl;
+    
+    // maximum and minimum number
+    cout << op << endl;
+    cout << po << endl;
+    
+    //Round off (floor & ceil)
+    cout << rn << endl;
+    cout << nr << endl;
+    cout << r << endl;
+    
+    cout << root << endl;
+    cout << rt << endl;
+    return 0;
+}
+
+-------------------------------------------------------------------
 User Input :
 
 #include <iostream>
